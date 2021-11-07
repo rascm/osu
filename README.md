@@ -12,12 +12,6 @@ Install with npm
 $ npm i @rascm/osu
 ```
 
-or yarn:
-
-```bash
-$ yarn add @rascm/osu
-```
-
 Load module, and request token in ESM:
 
 ```javascript
