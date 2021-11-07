@@ -17,7 +17,7 @@ Load module, and request token in ESM:
 ```javascript
 import osu from '@rasm/osu';
 const auth = new osu.Authentication(Your client id here, Your secret key here);
-const token = await auth.forClient(); // Return {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400} or {"error" : "reason here", "response" : "returned object from api"}
+const token = await auth.client(); // Return {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400} or {"error" : "reason here", "response" : "returned object from api"}
 ```
 
 Load module, and request token in Common JS:
@@ -25,7 +25,7 @@ Load module, and request token in Common JS:
 ```javascript
 const osu = require('@rascm/osu');
 const auth = new osu.Authentication(Your client id here, Your secret key here);
-const token = auth.forClient();
+const token = auth.client();
 token.then(access_token => {
 	// access_token = {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400}  or {"error" : "reason here", "response" : "returned object from api"}
 });
