@@ -230,13 +230,13 @@ At least one filter must be used
 | query          | string  |               |
 | type           | string  | any           |
 
-* **visual**: visual: Should it include a video, a storyboard or both? Accepted values: storyboard, video, both.
+* **visual**: Should it include a video, a storyboard or both? Accepted values: storyboard, video, both.
 * **featuredArtist**: Search only the featured artists
 * **genre:**  Search only beatmaps in this genre. *Accepted values:* videogame, anime, rock, pop, other, novelty, hiphop, electronic, metal, classical, folk, jazz or unspecified.
 * **language**: Search only beatmaps in this language. *Accepted values*: english, chinese, french, german, italian, japanese, korean, spanish, swedish, russian, polish, instrumental, unspecified or other.
 * **mode**: Search in specified game mode. *Accepted values*: standard, taiko, fruits or mania
 * **query**: You can enter the search terms.
-* **type**: WWhat kind of maps should it search for? *Accepted values:* ranked, loved, qualified, pending, graveyard or any
+* **type**: What kind of maps should it search for? *Accepted values:* ranked, loved, qualified, pending, graveyard or any
 
 ------
 
