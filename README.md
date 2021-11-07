@@ -24,7 +24,7 @@ Load module, and request token in Common JS:
 
 ```javascript
 const osu = require('@rascm/osu');
-const auth = new osu.Authentication(Your client id here, Your secret key here);
+const auth = new osu.Authentication("Your client id here", "Your secret key here");
 const token = auth.client();
 token.then(access_token => {
 	// access_token = {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400}  or {"error" : "reason here", "response" : "returned object from API"}
