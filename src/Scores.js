@@ -31,7 +31,7 @@ module.exports = class Scores extends ParseToken {
 			if(!GameModes.has($searchParams.mode))
 				reject('Invalid game mode!');
 
-			req(OSU_API_URL + '/beatmaps/'+ $beatmap_id +'/scores/users/' + $user_id, 'GET', null, null, this.#auth_data).then(response => {
+			req(OSU_API_URL + '/beatmaps/'+ $beatmap_id +'/scores/users/' + $user_id, 'GET', null, $searchParams, this.#auth_data).then(response => {
 				return resolve(response);
 			}).catch(e => {
 				return reject(e);
