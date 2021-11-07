@@ -1,6 +1,6 @@
 ![](https://github.com/rascm/osu/blob/main/assets/logo.png)
 
-Module is promise based, and uses osu!api v2. To use api you need to register your app [here](https://osu.ppy.sh/home/account/edit), just scroll down to set up oAuth applications. You will need the client id and secret code. Only the most frequently used, stable APIs are available!
+Module is promise based, and uses osu!api v2. To use api you need to register your app [here](https://osu.ppy.sh/home/account/edit), just scroll down to set up oAuth applications. You will need the client id and secret code. Only the most frequently used, stable APIs are available! If something is wrong, you can report it on [GitHub](https://github.com/rascm/osu).
 
 ## Usage
 
