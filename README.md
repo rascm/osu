@@ -227,7 +227,6 @@ At least one filter must be used
 | genre          | string  |               |
 | language       | string  |               |
 | mode           | string  |               |
-| nsfw           | boolean |               |
 | query          | string  |               |
 | type           | string  | any           |
 
@@ -236,7 +235,6 @@ At least one filter must be used
 * **genre:**  Search only beatmaps in this genre. *Accepted values:* videogame, anime, rock, pop, other, novelty, hiphop, electronic, metal, classical, folk, jazz or unspecified.
 * **language**: Search only beatmaps in this language. *Accepted values*: english, chinese, french, german, italian, japanese, korean, spanish, swedish, russian, polish, instrumental, unspecified or other.
 * **mode**: Search in specified game mode. *Accepted values*: standard, taiko, fruits or mania
-* **nsfw**: Display adult content.
 * **query**: You can enter the search terms.
 * **type**: Which maps should you search? *Accepted values:* ranked, loved, qualified, pending, graveyard or any
 
@@ -266,7 +264,7 @@ Information about beatmap scores and matches
 
 ***getBeatmapScore($beatmap_id, $user_id, $searchParams):*** return *Promise*
 
-Get beatmap information with id, filename, or checksum.
+Get beatmap score from a user.
 
 | Parameter     | type    | required |
 | ------------- | ------- | -------- |
