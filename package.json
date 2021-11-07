@@ -1,0 +1,22 @@
+{
+ "name": "@rascm/osu",
+ "version": "1.0.0",
+ "description": "osu api v2 in node.js",
+ "main": "./index.js",
+ "module": "./esm.mjs",
+ "engines": {
+  "node": ">=15.0.0"
+ },
+ "keywords": [
+  "osu",
+  "api",
+  "v2",
+  "esm"
+ ],
+ "author": "rascm",
+ "license": "MIT",
+ "dependencies": {
+  "node-fetch": "2.6.6"
+ },
+ "devDependencies": {}
+}
