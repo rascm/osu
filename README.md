@@ -1,6 +1,6 @@
 ![](https://github.com/rascm/osu/blob/main/assets/logo.png)
 
-The module is promise based, and uses osu!api v2. To use API you need to register your app [here](https://osu.ppy.sh/home/account/edit), just scroll down to set up oAuth applications. You will need the client id and secret code. Only the most frequently used, stable API endpoints are available! If something is wrong, you can report it on [GitHub](https://github.com/rascm/osu/issues).
+The module is promise based, and uses osu!API v2. To use API you need to register your app [here](https://osu.ppy.sh/home/account/edit), just scroll down to set up oAuth applications. You will need the client id and secret code. Only the most frequently used, stable API endpoints are available! If something is wrong, you can report it on [GitHub](https://github.com/rascm/osu/issues).
 
 ## Usage
 
@@ -17,7 +17,7 @@ Load module, and request token in ESM:
 ```javascript
 import osu from '@rasm/osu';
 const auth = new osu.Authentication("Your client id here", "Your secret key here");
-const token = await auth.client(); // Return {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400} or {"error" : "reason here", "response" : "returned object from api"}
+const token = await auth.client(); // Return {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400} or {"error" : "reason here", "response" : "returned object from API"}
 ```
 
 Load module, and request token in Common JS:
@@ -27,7 +27,7 @@ const osu = require('@rascm/osu');
 const auth = new osu.Authentication(Your client id here, Your secret key here);
 const token = auth.client();
 token.then(access_token => {
-	// access_token = {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400}  or {"error" : "reason here", "response" : "returned object from api"}
+	// access_token = {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400}  or {"error" : "reason here", "response" : "returned object from API"}
 });
 token.catch(error => {
     // error = Reject reason
