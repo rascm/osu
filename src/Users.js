@@ -86,7 +86,7 @@ module.exports = class Users extends ParseToken {
 			if($mode && $mode !== 'default' && !SearchGameModes.has($mode))
 				return reject('Invalid game mode!');
 
-			req(OSU_API_URL + '/users/' + $user + ($mode !== 'default' ? '/' + $mode : ''), 'GET', null, {key : $by}, this.#auth_data).then(response => {
+			req(OSU_API_URL + '/users/' + $user_id + ($mode !== 'default' ? '/' + $mode : ''), 'GET', null, {key : $by}, this.#auth_data).then(response => {
 				return resolve(response);
 			}).catch(e => {
 				return reject(e);
