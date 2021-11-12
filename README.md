@@ -1,6 +1,6 @@
 ![](https://github.com/rascm/osu/blob/main/assets/logo.png)
 
-Module is promise based, and uses osu!api v2. To use api you need to register your app [here](https://osu.ppy.sh/home/account/edit), just scroll down to set up oAuth applications. You will need the client id and secret code. Only the most frequently used, stable APIs are available! If something is wrong, you can report it on [GitHub](https://github.com/rascm/osu).
+The module is promise based, and uses osu!API v2. To use API you need to register your app [here](https://osu.ppy.sh/home/account/edit), just scroll down to set up oAuth applications. You will need the client id and secret code. Only the most frequently used, stable API endpoints are available! If something is wrong, you can report it on [GitHub](https://github.com/rascm/osu/issues).
 
 ## Usage
 
@@ -16,29 +16,29 @@ Load module, and request token in ESM:
 
 ```javascript
 import osu from '@rasm/osu';
-const auth = new osu.Authentication(Your client id here, Your secret key here);
-const token = await auth.client(); // Return {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400} or {"error" : "reason here", "response" : "returned object from api"}
+const auth = new osu.Authentication("Your client id here", "Your secret key here");
+const token = await auth.client(); // Return {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400} or {"error" : "reason here", "response" : "returned object from API"}
 ```
 
 Load module, and request token in Common JS:
 
 ```javascript
 const osu = require('@rascm/osu');
-const auth = new osu.Authentication(Your client id here, Your secret key here);
+const auth = new osu.Authentication("Your client id here", "Your secret key here");
 const token = auth.client();
 token.then(access_token => {
-	// access_token = {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400}  or {"error" : "reason here", "response" : "returned object from api"}
+	// access_token = {"access_token" : "your access token here", "token_type" : "Bearer", "expires_in" : 86400}  or {"error" : "reason here", "response" : "returned object from API"}
 });
 token.catch(error => {
     // error = Reject reason
 });
 ```
 
-## Available APIs
+## Available Endpoints
 
 **Beatmapsets:**
 
-Beatmap and beatmapset listing, filtering, search, beatmapset events, and get information about beatmaps.
+Beatmap and beatmapset listing, filtering, search, beatmapset events, and information fetching about beatmaps.
 
 **Scores:**
 
@@ -48,7 +48,7 @@ Retrieve player results, view map rankings, retrieve matches, information about 
 
 Detailed profiles of players, kudosu informations, player history...
 
-## Detailed informations of functions
+## Detailed information of functions
 
 ### class Authentication
 
@@ -230,13 +230,13 @@ At least one filter must be used
 | query          | string  |               |
 | type           | string  | any           |
 
-* **visual**: Should it include a video or a storyboard, or both? Accepted values: storyboard, video, both.
+* **visual**: Should it include a video, a storyboard or both? Accepted values: storyboard, video, both.
 * **featuredArtist**: Search only the featured artists
 * **genre:**  Search only beatmaps in this genre. *Accepted values:* videogame, anime, rock, pop, other, novelty, hiphop, electronic, metal, classical, folk, jazz or unspecified.
 * **language**: Search only beatmaps in this language. *Accepted values*: english, chinese, french, german, italian, japanese, korean, spanish, swedish, russian, polish, instrumental, unspecified or other.
 * **mode**: Search in specified game mode. *Accepted values*: standard, taiko, fruits or mania
 * **query**: You can enter the search terms.
-* **type**: Which maps should you search? *Accepted values:* ranked, loved, qualified, pending, graveyard or any
+* **type**: What kind of maps should it search for? *Accepted values:* ranked, loved, qualified, pending, graveyard or any
 
 ------
 
